@@ -1,5 +1,5 @@
 
-import time from time
+import time from time　
 import wave
 import struct
 import math
