@@ -12,14 +12,17 @@ U+3053 = 0b0011 0000 0101 0011
 10 000001 → 81
 10 0011   → 93"""
 
-"""コードを自分で作成して、文字列に変換する実験.
-koは、3.5mmから取得したanalogをデジタル変換したものを16進数で表したもの.を模している"""
+"""コードポイントvsコードユニット"""
 
-ko=["e3","81","93"]
-kostr=""
-for i in ko:
-    kostr+=i
-print(kostr)
-testbyte=bytes.fromhex(kostr)
-print(testbyte)
-print(testbyte.decode(strcode))
+s = "こab##[[:/p;-@]"
+codepoint = [hex(ord(ss)) for ss in s]
+codeunit=s.encode(strcode).hex()
+print(codepoint)
+print(hex)
+
+strpoint=[ chr(int(po, 16)) for po in codepoint]
+strhex=str(bytes.fromhex(codeunit).decode(strcode))
+print(strpoint)
+print(strhex)
+
+
