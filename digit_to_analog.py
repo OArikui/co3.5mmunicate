@@ -4,8 +4,6 @@ import wave
 import struct
 import math
 import numpy as np
-from test_encode import codes
-strcode=codes[0]
 """
 I try to convert strings to analog
 """

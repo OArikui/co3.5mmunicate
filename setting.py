@@ -1,13 +1,13 @@
 
-"""low level setting for this project
-"""
+"""-----low level setting for this project-----"""
 splrat=44100#サンプリングレート
 code='utf-8'#文字コード
 splpeat=5#いくつのサンプルで一つの数字を表すか。少なければ速度は速いがノイズに弱く、多ければ速度は遅いがノイズに強い
+wavepath=".\\wave\\"
+cashpath=".\\cash\\"
+smplpath=".\\smpl\\"
 
-
-"""high level setting for this project
-"""
+"""-----high level setting for this project-----"""
 inputdex=None#音声入力デバイスのインデックス。Noneの場合はHeadset Microphoneを探す。
 otputdex=None#音声出力デバイスのインデックス。Noneの場合はHeadphoneを探す。
 datasamples={"hex016": list(range(16))
@@ -22,3 +22,5 @@ if inputdex is None:
 from devices import there_is_output
 if otputdex is None:
     otputdex=there_is_output()
+
+setted=False
